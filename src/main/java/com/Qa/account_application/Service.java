@@ -10,13 +10,14 @@ public class Service{
 	
 	private String jsonString;
 	
-	private Map<Integer, Account> account = new HashMap<>();
+	private Map<Integer, Account> account = new HashMap<Integer, Account>();
 	
 	public void addAccount(Account newAccount){
 		
 		account.put(newAccount.getAccountNumber(), newAccount );
 		
 	}
+	
 	
 	public void retriveAccount(Account accountNumber){
 		
