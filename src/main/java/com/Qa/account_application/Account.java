@@ -1,15 +1,22 @@
 package com.Qa.account_application;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Account {
+
+	@Column(length = 50)
 	private String firstName;
-	private String lastName; 
+	@Column(length = 50)
+	private String lastName;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int accountNumber;
-	
-	
-	
+
 	public Account(String firstName, String lastName, int accountNumber) {
 		super();
 		this.firstName = firstName;
@@ -17,28 +24,28 @@ public class Account {
 		this.accountNumber = accountNumber;
 	}
 
-	
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public int getAccountNumber() {
 		return accountNumber;
 	}
+
 	public void setAccountNumber(int accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-	
-	
 
-
-	
 }
