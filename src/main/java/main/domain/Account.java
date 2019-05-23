@@ -1,4 +1,4 @@
-package com.Qa.account_application;
+package main.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,9 +15,12 @@ public class Account {
 	private String lastName;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int accountNumber;
+	private Integer accountNumber;
 
-	public Account(String firstName, String lastName, int accountNumber) {
+	public Account() {
+	}
+	
+	public Account(String firstName, String lastName, Integer accountNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -40,11 +43,11 @@ public class Account {
 		this.lastName = lastName;
 	}
 
-	public int getAccountNumber() {
+	public Integer getAccountNumber() {
 		return accountNumber;
 	}
 
-	public void setAccountNumber(int accountNumber) {
+	public void setAccountNumber(Integer accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 
